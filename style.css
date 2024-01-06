@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('hero-image.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2% 6%;
+    align-items: center;
+}
+#eduform{
+    text-decoration: none;
+    color: #dcdcdd;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: helvetica;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #dcdcdd;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-box h2 sec {
+    color: #F29559;
+}
+nav .fa-solid{
+  display: none;
+}
+
+/* popup  */
+
+.popup{
+  height: 300px;
+  width:380px;
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1.25);
+  background: #acacac;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+  border-radius:10px ;
+  opacity: 0;
+  transition:150ms;
+             
+}
+.popup.active{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: 2;
+    transition:150ms;
+}
+.popup .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    background:#007185;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.popup .form h2{
+  text-align: center;
+  color: #222;
+  margin: 10px 0 10px;
+  font-family: arial;
+}
+.popup .form .form-element{
+  margin: 15px 20px;
+}
+.popup .form .form-element label{
+  font-size: 1rem;
+  font-family: arial;
+}
+.popup .form .form-element input[type="email"],
+.popup .form .form-element input[type="password"] {
+  margin-top:5px ;
+  display: block;
+  height: 30px;
+  width: 90%;
+  outline:none ;
+  border-radius:6px ;
+}
+.popup .form .signup-btn{
+   margin: 10px 40%;
+   height:25px ;
+   width: 70px;
+   background: #007185;
+   border-radius: 5px;
+   cursor: pointer;
+}
+/* popuptwo*/
+.popuptwo{
+  height: 300px;
+  width:380px;
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(1.25);
+  background: #acacac;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+  border-radius:10px ;
+  opacity: 0;
+  transition:150ms;
+             
+}
+.popuptwo.passive{
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%,-50%) scale(1);
+    z-index: 2;
+    transition:150ms;
+}
+.popuptwo .close-btntwo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    background:#007185;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.popuptwo .form h2{
+  text-align: center;
+  color: #222;
+  margin: 10px 0 10px;
+  font-family: arial;
+}
+.popuptwo .form .form-element{
+  margin: 15px 20px;
+}
+.popuptwo .form .form-element label{
+  font-size: 1rem;
+  font-family: arial;
+}
+.popuptwo .form .form-element input[type="email"],
+.popuptwo .form .form-element input[type="password"] {
+  margin-top:5px ;
+  display: block;
+  height: 30px;
+  width: 90%;
+  outline:none ;
+  border-radius:6px ;
+}
+.popuptwo .form .signin-btn{
+   margin: 10px 40%;
+   height:25px ;
+   width: 70px;
+   background: #007185;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+/* text-box 2*/
+.text-msg{
+  width: 50%;
+  height: 150px;
+  margin:4% 20%;
+  text-align: center;
+  border-radius: 21px;
+background: #e0e0e0;
+box-shadow:  20px 20px 65px #acacac,
+             -20px -20px 65px #ffffff;
+}
+.text-msg h2{
+  font-family:arial ;
+  padding-top: 45px;
+}
+.text-msg p{
+  font-family: arial;
+  font-size: 1rem;
+}
+/*section - two */
+.about{
+  width: 100%;
+  height:500px ;
+  display: flex;
+  justify-content: space-evenly;
+  background-color:#e2e7e6 ;
+}
+.abt-title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: arial;
+  text-align: center;
+  margin: 50px  auto 20px auto;
+}
+.box{
+  height: 400px;
+  width: 23.5%;
+  margin-top: 15px;
+  padding: 20px 0px 15px;
+  background-color: white;
+  border-radius: 3px;
+}
+.box-img{
+  height: 310px;
+  background-size: cover;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.box-content{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size:1.2rem ;
+  font-family: arial;
+  font-weight: 550;
+}
+.box-content p {
+  color: #007185;
+  font-size: 1rem;
+}
+
+@media(max-width:600px){
+  .text-box{
+    font-size: 1rem;
+  }
+  #eduform{
+    font-size: 1.8rem;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+  .nav-links ul li a{
+    color: #202C39;
+  }
+  .nav-links{
+    position: absolute;
+    background: #dcdcdd;
+    height: 100vh;
+    width:200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+  }
+  .nav-links ul{
+    padding: 30px;
+  }
+  nav .fa-solid{
+    display: block;
+    color:black;
+    margin: 15px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  nav .fa-bars{
+    color: white;
+  }
+}
+/* ABOUT  COURSES MEDIA*/
+@media(max-width:600px){
+  .text-msg{
+    width: 90%;
+    margin-left: 15px;
+  }
+  .text-msg p{
+    display:none;
+  }
+  .about{
+    height: 1850px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box{
+    height: 400px;
+    width: 380px;
+  }
+  
+}
+  /*------FOOTER-------*/
+
+  .footer{
+    height: 120px;
+    width: 100%;
+    background: #202C39;
+    text-align: center;
+  }
+  .ftr-msg h1{
+    color: #dcdcdd;
+    font-size: 2rem;
+    font-weight: 800;
+    font-family: helvetica;
+    padding-top: 20px;
+  }
+.ftr-msg p{
+  color: #dcdcdd;
+  font-size: 1rem;
+  font-family: helvetica;
+}
